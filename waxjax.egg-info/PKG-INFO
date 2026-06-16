@@ -1,0 +1,55 @@
+Metadata-Version: 2.4
+Name: waxjax
+Version: 0.1.0
+Summary: Load HuggingFace SafeTensors models to JAX/Flax
+Home-page: https://github.com/ik12-b/waxjax
+Author: Your Name
+License: Apache-2.0
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: safetensors>=0.4.0
+Requires-Dist: numpy>=1.24
+Requires-Dist: jax>=0.4.0
+Provides-Extra: torch
+Requires-Dist: torch>=2.0; extra == "torch"
+Provides-Extra: flax
+Requires-Dist: flax>=0.7; extra == "flax"
+Provides-Extra: all
+Requires-Dist: torch>=2.0; extra == "all"
+Requires-Dist: flax>=0.7; extra == "all"
+Requires-Dist: ml_dtypes; extra == "all"
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# waxjax
+
+Lightweight helper to load HuggingFace SafeTensors checkpoints into JAX/Flax.
+
+Install (latest from source):
+
+```bash
+pip install git+https://github.com/ik12-b/waxjax.git
+```
+
+Build and publish (recommended to test to TestPyPI first): see `RELEASE.md` or run locally:
+
+```bash
+python -m pip install --upgrade build twine
+python -m build
+twine upload --repository testpypi dist/*
+```
